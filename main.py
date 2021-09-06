@@ -25,5 +25,20 @@ import matplotlib.pyplot as plt
 df = pd.read_excel (r'C:\Users\Moshe\PycharmProjects\FM2007\English Premier Division Season 5 excel.xlsx', sheet_name='English Premier Division Season')
 print (df)
 
+df.head()
 
+
+POINTS_TOP_10 = df["Pts"][0:10]
+TEAMS_TOP_10 = df["Team"][0:10]
+#plt.figure(1)
+plt.figure(figsize=(10, 10))
+plt.bar(TEAMS_TOP_10,POINTS_TOP_10)
+plt.show()
+
+POINTS = df["Pts"]
+TEAMS = df["Team"]
+plt.figure(2)
+plt.bar(TEAMS,POINTS)
+plt.tight_layout()
+plt.show()
 
